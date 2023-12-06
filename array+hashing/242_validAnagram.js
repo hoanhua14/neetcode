@@ -7,6 +7,7 @@ var isAnagram = function(s, t) {
             t = t.replace(i, "");
         }
     }
+    debugger
     if (s=="" & t=="") {
         return true;
     }
