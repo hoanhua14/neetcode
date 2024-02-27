@@ -1,6 +1,6 @@
 var compose = function(functions) {
-    const fn = (acc, f) => f(acc);
+    const func = (acc, f) => f(acc);
     return function(x) {
-        return functions.reduceRight(fn,x);
+        return functions.reduceRight(func,x);
         }
     }
