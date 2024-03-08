@@ -11,9 +11,7 @@ var ArrayWrapper = function(nums) {
  */
 ArrayWrapper.prototype.valueOf = function() {
     let arr = this.nums.flat(Infinity);
-    let init = 0;
-    let sum = arr.reduce((acc, cur) => acc + cur, init)
-    return sum;
+    return arr.reduce((acc, cur) => acc+cur, 0)
 }
 
 /**
