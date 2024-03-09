@@ -1,23 +1,65 @@
 class Calculator {
+
+    /**
+     * @param {number} value
+     */
     constructor(value) {
-
+        this.result = value;
     }
+
+    /**
+     * @param {number} value
+     * @return {Calculator}
+     */
     add(value){
-
+        this.result += value;
+        return this;
     }
+
+    /**
+     * @param {number} value
+     * @return {Calculator}
+     */
     subtract(value){
-
+        this.result -= value;
+        return this;
     }
-    multiply(value){
 
+    /**
+     * @param {number} value
+     * @return {Calculator}
+     */
+    multiply(value) {
+        this.result *= value;
+        return this;
     }
-    divide(value){
 
+    /**
+     * @param {number} value
+     * @return {Calculator}
+     */
+    divide(value) {
+        if (value) {
+            this.result /= value;
+            return this;
+        } else {
+            throw Error('Division by zero is not allowed');
+        }
     }
-    power(value){
 
+    /**
+     * @param {number} value
+     * @return {Calculator}
+     */
+    power(value) {
+        this.result **= value;
+        return this;
     }
-    getResult(value){
 
+    /**
+     * @return {number}
+     */
+    getResult() {
+        return this.result;
     }
 }
