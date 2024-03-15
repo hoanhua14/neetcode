@@ -11,7 +11,8 @@ var flat = function(arr, n) {
         } else {
             // If it's a number or depth is exhausted, push to result
             res.push(arr[i]);
-        }
+        };
+
     }
 
     return res;
