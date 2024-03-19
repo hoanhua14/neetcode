@@ -10,3 +10,26 @@ var containsDuplicate = function(nums) {
         return true;
     }
 };
+
+
+// input: an array of intergers nums
+// output: true if there's dup, false if distinct
+// pseudocode:
+// - create a holder array called checked
+// - loop thru nums
+//  + if the ele is not in checked
+//      + add ele to checked
+//  + else
+//      + return false
+
+const solution2 = function(nums) {
+    let checked = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (!checked.has(nums[i])) {
+            checked.push(nums[i]);
+        } else {
+            return false;
+        }
+    }
+    return true;
+}
