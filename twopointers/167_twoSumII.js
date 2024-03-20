@@ -41,3 +41,23 @@ var twoSum = function(numbers, target) {
                 }
             }
         };
+
+
+// input: an array of integers (numbers) that is increasing , a target
+// output: return the index of 2 numbers, added by one, that add up to target
+// constraint: constant extra space, may not use the same element twice
+
+// [2, 3, 4], target = 6
+//
+var twoSum = function(numbers, target) {
+    let l = 0;
+    let r = numbers.length - 1;
+    while (numbers[l] + numbers[r] !== target) {
+        if (numbers[l] + numbers[r] > target) {
+            r -=1;
+        } else if (numbers[l] + numbers[r] < target) {
+            l +=1;
+        }
+    }
+    return [l+1, r+1]
+};
