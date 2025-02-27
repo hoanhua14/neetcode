@@ -33,3 +33,21 @@ const solution2 = function(nums) {
     }
     return true;
 }
+class Solution {
+    /**
+     * @param {number[]} nums
+     * @return {boolean}
+     */
+    hasDuplicate(nums) {
+        let checked = []
+        for (let num of nums) {
+            if (checked.includes(num)){
+                return true;
+                break
+            } else {
+                checked.push(num)
+            }
+        }
+        return false
+    }
+}
