@@ -12,3 +12,14 @@ var twoSum = function (nums, target) {
     }
   }
 };
+var twoSum = function (nums, target) {
+  const myMap = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    let diff = target - nums[i];
+    if (myMap.has(diff)) {
+      return [i, myMap.get(diff)];
+    } else {
+      myMap.set(nums[i], i);
+    }
+  }
+};
